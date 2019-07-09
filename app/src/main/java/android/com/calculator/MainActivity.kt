@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         //operators
         tvPlus.setOnClickListener { appendOnExpression("+",canClear = false) }
         tvMinus.setOnClickListener { appendOnExpression("-",canClear = false) }
-        tvMul.setOnClickListener { appendOnExpression("x",canClear = false) }
+        tvMul.setOnClickListener { appendOnExpression("*",canClear = false) }
         tvDivide.setOnClickListener { appendOnExpression("/",canClear = false) }
         tvOpen.setOnClickListener { appendOnExpression("(",canClear = false) }
         tvClose.setOnClickListener { appendOnExpression(")",canClear = false) }
@@ -57,7 +57,6 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     tvResult.text = result.toString()
                 }
-
             } catch (e:Exception){
                 Log.d("Exception","message:" + e.message)
             }
